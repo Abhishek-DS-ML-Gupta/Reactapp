@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    
+    <!-- Embedded 3D-style SVG favicon for Sandeep Studio -->
+    <base href="/" />
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml;utf8,
+      <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'>
+        <defs>
+          <radialGradient id='g' cx='50%' cy='50%' r='50%'>
+            <stop offset='0%' stop-color='%2300f0ff'/>
+            <stop offset='100%' stop-color='%2300334d'/>
+          </radialGradient>
+        </defs>
+        <circle cx='50' cy='50' r='40' fill='url(%23g)'/>
+        <circle cx='50' cy='50' r='25' fill='black' opacity='0.5'/>
+        <text x='50%' y='55%' text-anchor='middle' fill='white' font-size='10' font-family='Arial' font-weight='bold'>SS</text>
+      </svg>" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sandeep Studio - Professional Photography & Videography</title>
+    <meta name="description" content="Sandeep Studio specializes in wedding, pre-wedding, candid, cinematic, and event photography and videography in Azamgarh, UP. Professional photography services with artistic excellence.">
+    <meta name="keywords" content="wedding photography, pre-wedding shoot, event photography, videography, Azamgarh photographer, cinematic videos">
+  </head>
+  <body>
+    <div id="root"></div>
+
+    <script type="module" src="/src/main.tsx"></script>
+    <script>
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', function () {
+          navigator.serviceWorker.register('/sw.js').then(function (registration) {
+            console.log('ServiceWorker registered:', registration.scope);
+          }, function (err) {
+            console.log('ServiceWorker registration failed:', err);
+          });
+        });
+      }
+    </script>
+  </body>
+</html>
