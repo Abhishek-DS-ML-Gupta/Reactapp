@@ -142,13 +142,13 @@ const Home = () => {
           <AnimatedSection animation="fade-in-up" delay={400}>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
-                to="/portfolio"
+                to="/sandeep-studio/portfolio"
                 className="bg-yellow-500 text-black px-8 py-4 rounded-full text-lg font-semibold hover:bg-yellow-400 transition-all duration-300 glow-btn font-sinkin"
               >
                 View Portfolio
               </Link>
               <Link
-                to="/contact"
+                to="/sandeep-studio/contact"
                 className="border-2 border-white text-white px-8 py-4 rounded-full text-lg font-semibold hover:bg-white hover:text-black transition-all duration-300 font-sinkin"
               >
                 Book Now
@@ -380,7 +380,7 @@ const Home = () => {
           <p className="text-xl text-gray-800 mb-8 font-sinkin">
             Let's discuss your vision and create something extraordinary together.
           </p>
-          <Link to="/contact"
+          <Link to="/sandeep-studio/contact"
             className="relative inline-block px-8 py-4 bg-black text-white rounded-full text-lg font-semibold transition-transform duration-300 hover:scale-105 hover:bg-gray-900 focus:outline-none focus:ring-4 focus:ring-yellow-300">
             Get In Touch
             <span className="absolute inset-0 rounded-full border border-white animate-ping opacity-10 z-[-1]"></span>

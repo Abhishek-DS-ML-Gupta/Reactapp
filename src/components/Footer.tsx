@@ -1,5 +1,4 @@
-import React from 'react';
-import { MapPin, Phone, Mail, Clock, Instagram, Twitter, Youtube } from 'lucide-react';
+import { MapPin, Phone, Mail, Clock, Instagram, Youtube } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 const Footer: React.FC = () => {
