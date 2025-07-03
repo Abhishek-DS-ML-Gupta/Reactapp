@@ -9,7 +9,7 @@ const Footer: React.FC = () => {
 
       {/* Floating particles */}
       {[...Array(5)].map((_, i) => (
-        <div 
+        <div
           key={i}
           className="absolute w-0.5 h-0.5 bg-[#d4af37] rounded-full opacity-0 animate-[particleFloat_8s_ease-in-out_infinite]"
           style={{
@@ -46,7 +46,7 @@ const Footer: React.FC = () => {
                 { icon: <Mail className="w-7 h-7" />, text: 'sandeepstudioazm@gmail.com' },
                 { icon: <Clock className="w-7 h-7" />, text: 'Monday - Sonday\n9:00 AM - 7:00 PM' }
               ].map((item, index) => (
-                <li 
+                <li
                   key={index}
                   className="flex items-center opacity-0 -translate-x-8 animate-[slideInLeft_0.6s_ease-out_forwards]"
                   style={{ animationDelay: `${1.5 + index * 0.2}s` }}
@@ -75,7 +75,7 @@ const Footer: React.FC = () => {
                 'Event Photography',
                 'Digital Photo Editing'
               ].map((service, index) => (
-                <li 
+                <li
                   key={service}
                   className="flex items-center opacity-0 translate-y-5 animate-[fadeInUp_0.5s_ease-out_forwards]"
                   style={{ animationDelay: `${1.8 + index * 0.15}s` }}
@@ -117,16 +117,20 @@ const Footer: React.FC = () => {
         {/* Footer Bottom Navigation */}
         <div className="border-t border-[rgba(212,175,55,0.2)] pt-10 text-center opacity-0 animate-[fadeIn_1s_ease-out_3s_forwards]">
           <nav className="flex flex-wrap justify-center gap-6 mb-8">
-            {['Home', 'Portfolio', 'About', 'Services', 'Contact', 'Testimonials'].map((item) => (
-              <Link
-                key={item}
-                to={`/${item.toLowerCase()}`}
-                className="relative text-[#c4b598] text-sm px-4 py-2 rounded-full hover:text-[#d4af37] hover:-translate-y-0.5 transition-all before:absolute before:inset-0 before:bg-gradient-to-br before:from-transparent before:via-[rgba(212,175,55,0.1)] before:to-transparent before:rounded-full before:opacity-0 hover:before:opacity-100 before:transition-opacity"
-              >
-                {item}
-              </Link>
-            ))}
+            {['Home', 'Portfolio', 'About', 'Services', 'Contact', 'Testimonials'].map((item) => {
+              const path = item.toLowerCase() === 'home' ? '/Reactapp/' : `/Reactapp/${item.toLowerCase()}`;
+              return (
+                <Link
+                  key={item}
+                  to={path}
+                  className="relative text-[#c4b598] text-sm px-4 py-2 rounded-full hover:text-[#d4af37] hover:-translate-y-0.5 transition-all before:absolute before:inset-0 before:bg-gradient-to-br before:from-transparent before:via-[rgba(212,175,55,0.1)] before:to-transparent before:rounded-full before:opacity-0 hover:before:opacity-100 before:transition-opacity"
+                >
+                  {item}
+                </Link>
+              );
+            })}
           </nav>
+
           <p className="text-[#8a7960] text-sm italic">
             © {new Date().getFullYear()} Sandeep Studio. All rights reserved. | Crafted with passion for photography.
           </p>

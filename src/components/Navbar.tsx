@@ -18,12 +18,12 @@ const Navbar = () => {
   }, []);
 
   const navItems = [
-    { name: 'Home', path: '/' },
-    { name: 'Portfolio', path: '/portfolio' },
-    { name: 'About', path: '/about' },
-    { name: 'Services', path: '/services' },
-    { name: 'Testimonials', path: '/testimonials' },
-    { name: 'Contact', path: '/contact' },
+    { name: 'Home', path: '/Reactapp/' },
+    { name: 'Portfolio', path: '/Reactapp/portfolio' },
+    { name: 'About', path: '/Reactapp/about' },
+    { name: 'Services', path: '/Reactapp/services' },
+    { name: 'Testimonials', path: '/Reactapp/testimonials' },
+    { name: 'Contact', path: '/Reactapp/contact' },
   ];
 
   return (

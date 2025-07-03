@@ -1,4 +1,5 @@
 import { Award, Camera, Heart, Users } from 'lucide-react';
+import { Link } from 'react-router-dom';
 import AnimatedSection from '../components/AnimatedSection';
 
 const About = () => {
@@ -20,12 +21,12 @@ const About = () => {
                 <p className="text-gray-400 leading-relaxed mb-12 font-Apercu">
                   Sandeep Studio has been capturing life’s precious moments for over 33 years, preserving every wedding, celebration, and smile with care and artistic excellence.
                 </p>
-                <a
-                  href="/history"
+                <Link
+                  to="/Reactapp/history"
                   className="inline-block bg-yellow-500 text-black px-8 py-4 rounded-full text-lg font-semibold hover:bg-gray-800 transition-colors duration-300 font-Apercu"
                 >
                   Our Journey
-                </a>
+                </Link>
               </div>
             </AnimatedSection>
 
@@ -135,7 +136,7 @@ const About = () => {
         </div>
       </section>
 
-      {/* Team Section (Updated) */}
+      {/* Team Section */}
       <section className="py-20 bg-[#3E3C53] relative">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <AnimatedSection>
@@ -167,7 +168,7 @@ const About = () => {
         </div>
       </section>
 
-      {/* Final CTA Section */}
+      {/* CTA Section */}
       <section className="py-24 bg-[#FFDF58] relative overflow-hidden">
         <svg className="absolute top-1/4 left-[-150px] w-[500px] h-[500px] opacity-20 animate-float-slow z-0" viewBox="0 0 200 200"><circle cx="100" cy="100" r="90" fill="white" /></svg>
         <svg className="absolute bottom-1/4 right-[-180px] w-[500px] h-[500px] opacity-20 animate-float-slow-reverse z-0" viewBox="0 0 200 200"><circle cx="100" cy="100" r="90" fill="black" /></svg>
@@ -179,12 +180,12 @@ const About = () => {
             <p className="text-2xl text-gray-800 mb-10 font-Apercu">
               Ready to capture your special moments? We’d love to hear your story and bring it to life.
             </p>
-            <a
-              href="/history"
+            <Link
+              to="/Reactapp/history"
               className="inline-block bg-black text-white px-10 py-5 rounded-full text-lg font-semibold hover:bg-gray-900 transition duration-300 font-Apercu"
             >
-              Start Your Journey
-            </a>
+              Our Journey
+            </Link>
           </AnimatedSection>
         </div>
       </section>

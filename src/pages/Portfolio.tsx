@@ -70,7 +70,7 @@ const Portfolio = () => {
     },
     {
       id: 8,
-      category: 'events',
+      category: 'pre-wedding',
       type: 'image',
       url: 'https://images.pexels.com/photos/1190298/pexels-photo-1190298.jpeg',
       title: 'Birthday Celebration',

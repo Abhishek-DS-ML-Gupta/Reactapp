@@ -15,27 +15,23 @@ import History from './pages/History';
 
 function App() {
   const [loading, setLoading] = useState(true);
-  const location = useLocation(); // Track current route
+  const location = useLocation();
 
   useEffect(() => {
-    // Check if it's the initial load (no localStorage flag)
     const isInitialLoad = !localStorage.getItem('hasVisited');
-
-    // Check if the user refreshed the homepage
     const isHomeRefresh = location.pathname === '/' && performance.navigation.type === 1;
 
-    // Show loader only on initial load or homepage refresh
     if (isInitialLoad || isHomeRefresh) {
       const timeout = setTimeout(() => {
         setLoading(false);
-        localStorage.setItem('hasVisited', 'true'); // Mark as visited
-      }, 5000); // 5-second loader
-      
+        localStorage.setItem('hasVisited', 'true');
+      }, 5000);
+
       return () => clearTimeout(timeout);
     } else {
-      setLoading(false); // Hide loader immediately for other cases
+      setLoading(false);
     }
-  }, [location.pathname]); // Re-run when route changes
+  }, [location.pathname]);
 
   if (loading) return <Preloader />;
 
@@ -44,13 +40,13 @@ function App() {
       <Navbar />
       <main>
         <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/history" element={<History />} />
-          <Route path="/portfolio" element={<Portfolio />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/services" element={<Services />} />
-          <Route path="/testimonials" element={<Testimonials />} />
-          <Route path="/contact" element={<Contact />} />
+          <Route path="/Reactapp/" element={<Home />} />
+          <Route path="/Reactapp/history" element={<History />} />
+          <Route path="/Reactapp/portfolio" element={<Portfolio />} />
+          <Route path="/Reactapp/about" element={<About />} />
+          <Route path="/Reactapp/services" element={<Services />} />
+          <Route path="/Reactapp/testimonials" element={<Testimonials />} />
+          <Route path="/Reactapp/contact" element={<Contact />} />
         </Routes>
       </main>
       <Footer />
@@ -59,10 +55,20 @@ function App() {
   );
 }
 
-// Wrap App with Router to use useLocation
+// Inline scroll-to-top handler
+function ScrollToTopOnRouteChange() {
+  const location = useLocation();
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [location.pathname]);
+  return null;
+}
+
+// Wrap App with Router and scroll-to-top logic
 export default function AppWrapper() {
   return (
     <Router>
+      <ScrollToTopOnRouteChange />
       <App />
     </Router>
   );
