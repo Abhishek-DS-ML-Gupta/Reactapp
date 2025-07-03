@@ -117,7 +117,7 @@ const Testimonials = () => {
                 Stay updated with our latest work and behind-the-scenes moments on Instagram.
               </p>
               <a
-                href="https://instagram.com/sandeepstudio"
+                href="https://www.instagram.com/sandeepstudioazamgarh?igsh=MXNudzhrZWsxZjB5NA%3D%3D"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center bg-gradient-to-r from-purple-500 to-pink-500 text-white px-6 py-3 rounded-full font-semibold hover:from-purple-600 hover:to-pink-600 transition-all duration-300 font-sinkin"
